@@ -1,41 +1,5 @@
-// import React, { useState, useEffect } from 'react';
-
-
-
-// function App() {
-//   const [people, setPeople] = useState([]);
-
-//   useEffect(() => {
-//     fetch("http://localhost:3000/people")
-//       .then((response) => response.json())
-//       .then((data) => {
-//         console.log(data);
-//         setPeople(data);
-//       });
-//   }, []); // empty dependency array to run only once when the component mounts
-
-//   return (
-//     <div>
-//       {people.map((person) => (
-//         <div key={person.id}>
-//           <div>{person.first_name}</div>
-//           <div>{person.last_name}</div>
-//           <div>{person.email}</div>
-//           <div>{person.gender}</div>
-//           <div>{person.address}</div>
-//           <div>{person.fee_balance}</div>
-          
-//         </div>
-//       ))}
-//     </div>
-//   );
-// }
-
-// export default App;
-import React, { useState } from 'react';
-
-function App() {
-  const people = [
+{
+  "people": [
     {
       "id": 1,
       "first_name": "Evelin",
@@ -118,9 +82,3 @@ function App() {
     }
   ]
 }
-    
-  
-
-  
-
-export default App;
