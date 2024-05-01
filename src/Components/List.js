@@ -1,23 +1,19 @@
-// import React from 'react'
-// import Item from './Item';
-// function List() {
-//   return (
-//     <div>List</div>
-//   )
-// }
+import React from 'react'
+import './List.css'
 
-// export default List
-import React from 'react';
-import Item from './Item';
 
-function List({ people, deletePerson, updatePerson }) {
-  return (
-    <div>
-      {people.map(person => (
-        <Item key={person.id} person={person} deletePerson={deletePerson} updatePerson={updatePerson} />
-      ))}
+function List({props}) {
+  return props.map(({id,first_name,last_name,email,gender,fee_balance})=> (
+    <div key={id} className='props'>
+      <h4>first_name:{first_name}</h4>
+      <h4>last_name:{last_name}</h4>
+      <p>email:{email}</p>
+      <p>gender:{gender}</p>
+      <p>fee_balance:{fee_balance}</p> <br/>
+      <button >Delete</button> 
+
     </div>
-  );
-}
+  ))}
+
 
 export default List;
